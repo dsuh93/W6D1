@@ -1,5 +1,5 @@
 class AnswerChoice < ApplicationRecord
-
+    validates :text, presence: true, uniqueness: true 
 
     belongs_to :question,
         foreign_key: :question_id,
